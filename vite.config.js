@@ -3,4 +3,14 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
+  build: {
+    lib: {
+      entry: 'src/App.jsx',
+      formats: ['es'],
+      fileName: 'index',
+    },
+    rollupOptions: {
+      external: ['react', 'react/jsx-runtime'],
+    },
+  },
 })

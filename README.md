@@ -30,18 +30,6 @@ export default function App() {
 }
 ```
 
-And update `vite.config.js` to let Vite process JSX from node_modules:
-
-```js
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-
-export default defineConfig({
-  plugins: [react()],
-  optimizeDeps: { include: ['branch-viewer'] },
-})
-```
-
 Edit `src/branches.json` with the real Vercel preview URLs for this review:
 
 ```json
