@@ -41,20 +41,6 @@ Edit `src/branches.json` with the real Vercel preview URLs for this review:
 
 Push the branch — Vercel auto-deploys it and gives you one URL to share.
 
-## Required: allow iframes on feature branches
-
-Vercel blocks iframes by default. Add a `vercel.json` to each feature branch being reviewed:
-
-```json
-{
-  "headers": [{ "source": "/(.*)", "headers": [
-    { "key": "X-Frame-Options", "value": "ALLOWALL" },
-    { "key": "Content-Security-Policy", "value": "frame-ancestors *" }
-  ]}]
-}
-```
-
-Do this once per feature branch when you create it.
 
 ## Standalone dev
 
